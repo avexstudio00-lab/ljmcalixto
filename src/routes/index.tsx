@@ -1,3 +1,4 @@
+import { createFileRoute } from '@tanstack/react-router'
 import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
