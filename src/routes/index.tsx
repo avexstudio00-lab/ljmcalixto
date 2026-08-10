@@ -17,10 +17,10 @@ function Index() {
       >
         <Sparkles className="mx-auto h-12 w-12 text-primary mb-6" />
         <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-          Ask Lovable to build your saas start
+          Crie o site igual ao que eu te mandei
         </h1>
         <p className="text-muted-foreground text-lg mb-8 max-w-lg mx-auto">
-          We've successfully cloned the reference site structure and design intent.
+          Analisei a URL de referência e estou pronto para implementar as funcionalidades e o design solicitados.
         </p>
         <div className="bg-white p-6 rounded-xl border border-border shadow-sm inline-block">
           <p className="text-sm font-mono text-muted-foreground break-all">
