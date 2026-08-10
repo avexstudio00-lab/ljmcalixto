@@ -77,14 +77,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable Clone" },
-      { name: "description", content: "Clonagem de site solicitada pelo usuário." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable Clone" },
-      { property: "og:description", content: "Clonagem de site solicitada pelo usuário." },
+      { title: "Construção e Reformas em Cotia | LJM Calixto" },
+      { name: "description", content: "Empreiteira em Cotia e Granja Viana: reformas, ampliações e construção residencial e comercial com prazo, segurança e acabamento de qualidade. Peça seu orçamento." },
+      { name: "keywords", content: "construção em Cotia, reformas em Cotia, construção Granja Viana, empreiteira Cotia, construção residencial Cotia, construção comercial Cotia" },
+      { property: "og:title", content: "Construção e Reformas em Cotia | LJM Calixto" },
+      { property: "og:description", content: "Empreiteira em Cotia e Granja Viana: reformas, ampliações e construção residencial e comercial com prazo, segurança e acabamento de qualidade." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
