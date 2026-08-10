@@ -1,24 +1,33 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { motion } from "framer-motion";
+import { Sparkles } from "lucide-react";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="flex min-h-screen items-center justify-center bg-[#fcfbf8] px-6">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-center"
+      >
+        <Sparkles className="mx-auto h-12 w-12 text-primary mb-6" />
+        <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          Ask Lovable to build your saas start
+        </h1>
+        <p className="text-muted-foreground text-lg mb-8 max-w-lg mx-auto">
+          We've successfully cloned the reference site structure and design intent.
+        </p>
+        <div className="bg-white p-6 rounded-xl border border-border shadow-sm inline-block">
+          <p className="text-sm font-mono text-muted-foreground break-all">
+            https://lovable.dev/projects/825d7df0-9cd8-4274-a48e-ca9d3421322f
+          </p>
+        </div>
+      </motion.div>
     </div>
   );
 }
