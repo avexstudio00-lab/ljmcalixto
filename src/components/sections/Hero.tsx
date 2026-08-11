@@ -4,17 +4,19 @@ export function Hero() {
   return (
     <section id="inicio" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background dark">
       {/* Background Drone Video Placeholder / Dark Overlay */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70 z-10" />
+      <div className="absolute inset-0 z-0 bg-black">
         <video 
           autoPlay 
           muted 
           loop 
           playsInline
-          className="w-full h-full object-cover opacity-60"
+          preload="auto"
+          poster="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=2070&auto=format&fit=crop"
+          className="absolute inset-0 w-full h-full object-cover opacity-60 z-0"
         >
-          <source src="https://player.vimeo.com/external/494252666.sd.mp4?s=72ad57a58da2cae31de3a0d9247659dae930797f&profile_id=165&oauth2_token_id=57447761" type="video/mp4" />
+          <source src="https://res.cloudinary.com/emqxcgxp/video/upload/v1786411436/Drone_flying_over_construction_site_202608102223_y2zt3f.mp4" type="video/mp4" />
         </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/80 z-10" />
       </div>
 
       <div className="container mx-auto px-4 relative z-20 pt-20">
