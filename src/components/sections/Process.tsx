@@ -13,7 +13,7 @@ export function Process() {
         <div className="grid md:grid-cols-5 gap-8">
           {steps.map(s => (
             <div key={s.n} className="space-y-4">
-              <div className="text-4xl font-bold text-primary/20">{s.n}</div>
+              <div className="text-4xl font-bold text-primary">{s.n}</div>
               <h4 className="font-bold">{s.t}</h4>
               <p className="text-sm text-muted-foreground">{s.d}</p>
             </div>
