@@ -7,7 +7,7 @@ export function Process() {
     { n: "05", t: "ENTREGA", d: "Limpeza e entrega no prazo." },
   ];
   return (
-    <section id="processo" className="py-24">
+    <section id="processo" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <h3 className="text-3xl font-bold text-center mb-12">Como conduzimos a sua obra</h3>
         <div className="grid md:grid-cols-5 gap-8">

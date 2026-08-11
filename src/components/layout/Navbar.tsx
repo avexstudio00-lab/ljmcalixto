@@ -16,9 +16,12 @@ export function Navbar() {
   const activeId = useScrollSpy(NAV_ITEMS.map(item => item.href.substring(1)));
 
   return (
-    <nav className="fixed w-full z-50 bg-background/90 backdrop-blur-sm border-b border-border">
+    <nav className="fixed w-full z-50 bg-background/95 backdrop-blur-md border-b border-border transition-all duration-300">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <span className="text-xl font-bold text-foreground">LJM Calixto</span>
+        <div className="flex items-center gap-2">
+          <span className="text-2xl font-black text-primary tracking-tighter">LJM</span>
+          <span className="text-xl font-bold text-foreground">Calixto</span>
+        </div>
         
         <div className="hidden md:flex gap-6">
           {NAV_ITEMS.map((item) => (
