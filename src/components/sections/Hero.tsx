@@ -6,7 +6,15 @@ export function Hero() {
       {/* Background Drone Video Placeholder / Dark Overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent z-10" />
-        <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-40" />
+        <video 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+          className="w-full h-full object-cover opacity-40"
+        >
+          <source src="https://player.vimeo.com/external/494252666.sd.mp4?s=72ad57a58da2cae31de3a0d9247659dae930797f&profile_id=165&oauth2_token_id=57447761" type="video/mp4" />
+        </video>
       </div>
 
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center relative z-20 pt-20">
