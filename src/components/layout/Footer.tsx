@@ -1,8 +1,11 @@
 export function Footer() {
   return (
-    <footer id="contato" className="py-12 bg-secondary/80 border-t border-border">
-      <div className="container mx-auto px-4 text-center space-y-6">
-        <div className="text-2xl font-bold">LJM Calixto</div>
+    <footer id="contato" className="py-20 bg-background dark border-t border-border">
+      <div className="container mx-auto px-4 text-center space-y-10">
+        <div className="flex flex-col items-center gap-2">
+          <span className="text-3xl font-black text-primary tracking-tighter">LJM CALIXTO</span>
+          <span className="text-sm font-medium text-muted-foreground uppercase tracking-[0.2em]">Construções e Reformas</span>
+        </div>
         <p className="max-w-md mx-auto text-muted-foreground">
           Av. João Paulo Ablas, 1430, Jardim da Glória, Cotia - SP, CEP 06711-250
         </p>

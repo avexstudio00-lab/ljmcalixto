@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export function About() {
   return (
-    <section id="sobre" className="py-24 bg-secondary/50">
+    <section id="sobre" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
