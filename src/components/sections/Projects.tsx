@@ -19,17 +19,17 @@ export function Projects() {
             <div className="flex flex-col md:flex-row md:items-center gap-4 mb-6">
               <h4 className="text-3xl font-bold border-l-4 border-primary pl-4">Construção de Muro</h4>
               <Badge className="w-fit bg-primary text-primary-foreground font-bold px-3 py-1 text-sm uppercase">
-                Obra de grande porte — Mais de 500m
+                Obra de grande porte — mais de 500m de muro
               </Badge>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
               {[
-                { label: "Início da construção", desc: "começo do muro" },
-                { label: "Processo de construção", desc: "processo do muro" },
-                { label: "Processo de construção", desc: "processo do muro 2" },
-                { label: "Muro finalizado", desc: "final do muro" },
-                { label: "Muro finalizado", desc: "final do muro 2" },
+                { label: "Início da construção", src: "https://res.cloudinary.com/emqxcgxp/image/upload/v1786692489/come%C3%A7odomuro_sedwwd.jpg", alt: "Início da construção do muro pela LJM Calixto" },
+                { label: "Processo de construção", src: "https://res.cloudinary.com/emqxcgxp/image/upload/v1786692490/processodomuro_w9i54b.jpg", alt: "Processo de construção do muro pela LJM Calixto" },
+                { label: "Processo de construção", src: "https://res.cloudinary.com/emqxcgxp/image/upload/v1786692489/processodomuro2_sok6ya.jpg", alt: "Intermediário da construção do muro pela LJM Calixto" },
+                { label: "Muro finalizado", src: "https://res.cloudinary.com/emqxcgxp/image/upload/v1786692489/finaldomuro_bz7yoq.jpg", alt: "Muro finalizado pela LJM Calixto" },
+                { label: "Muro finalizado", src: "https://res.cloudinary.com/emqxcgxp/image/upload/v1786692489/finaldomuro2_p4lahw.jpg", alt: "Muro finalizado vista 2 pela LJM Calixto" },
               ].map((img, i) => (
                 <motion.div 
                   key={i} 
@@ -38,8 +38,12 @@ export function Projects() {
                   transition={{ delay: i * 0.1 }}
                   className="space-y-3"
                 >
-                  <div className="aspect-[4/3] bg-muted rounded-xl flex items-center justify-center text-muted-foreground border border-white/10 hover:border-primary/50 transition-colors overflow-hidden group">
-                    <span className="group-hover:scale-110 transition-transform duration-500 uppercase text-[10px] tracking-widest">{img.desc}</span>
+                  <div className="aspect-[4/3] bg-muted rounded-xl border border-white/10 hover:border-primary/50 transition-colors overflow-hidden group">
+                    <img 
+                      src={img.src} 
+                      alt={img.alt} 
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
                   </div>
                   <p className="text-xs text-muted-foreground text-center font-medium uppercase tracking-wider">{img.label}</p>
                 </motion.div>
@@ -52,9 +56,9 @@ export function Projects() {
             <h4 className="text-3xl font-bold border-l-4 border-primary pl-4 mb-6">Reforma de Telhado</h4>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { label: "Antes da reforma", desc: "antestelhado" },
-                { label: "Colocação das telhas", desc: "pondo as telhas" },
-                { label: "Entrega de materiais com caminhão munk", desc: "caminhão munk das telhas" },
+                { label: "Antes da reforma", src: "https://res.cloudinary.com/emqxcgxp/image/upload/v1786692491/antestelhado_banrnv.jpg", alt: "Telhado antes da reforma pela LJM Calixto" },
+                { label: "Colocação das telhas", src: "https://res.cloudinary.com/emqxcgxp/image/upload/v1786692489/pondo_as_telhas_nyth8g.jpg", alt: "Processo de colocação das telhas pela LJM Calixto" },
+                { label: "Entrega de materiais com caminhão munk", src: "https://res.cloudinary.com/emqxcgxp/image/upload/v1786692490/caminh%C3%A3omunkdastelhas_tnqyos.jpg", alt: "Entrega de materiais com caminhão munk pela LJM Calixto" },
               ].map((img, i) => (
                 <motion.div 
                   key={i}
@@ -63,8 +67,12 @@ export function Projects() {
                   transition={{ delay: i * 0.1 }}
                   className="space-y-3"
                 >
-                  <div className="aspect-video bg-muted rounded-xl flex items-center justify-center text-muted-foreground border border-white/10 hover:border-primary/50 transition-colors overflow-hidden group">
-                    <span className="group-hover:scale-110 transition-transform duration-500 uppercase text-[10px] tracking-widest">{img.desc}</span>
+                  <div className="aspect-video bg-muted rounded-xl border border-white/10 hover:border-primary/50 transition-colors overflow-hidden group">
+                    <img 
+                      src={img.src} 
+                      alt={img.alt} 
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
                   </div>
                   <p className="text-xs text-muted-foreground text-center font-medium uppercase tracking-wider">{img.label}</p>
                 </motion.div>
@@ -79,14 +87,22 @@ export function Projects() {
               {/* Par 1 */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-3">
-                  <div className="aspect-video bg-muted/50 rounded-xl flex items-center justify-center text-muted-foreground border border-white/5 overflow-hidden group">
-                    <span className="group-hover:scale-110 transition-transform duration-500 uppercase text-[10px] tracking-widest">frente barbearia antes</span>
+                  <div className="aspect-video bg-muted/50 rounded-xl border border-white/5 overflow-hidden group">
+                    <img 
+                      src="https://res.cloudinary.com/emqxcgxp/image/upload/v1786692490/frentedabarbeariaantes_ucgo2f.jpg" 
+                      alt="Frente da barbearia antes da reforma" 
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
                   </div>
                   <p className="text-xs text-muted-foreground text-center font-medium uppercase tracking-wider">Frente — antes</p>
                 </div>
                 <div className="space-y-3">
-                  <div className="aspect-video bg-muted rounded-xl flex items-center justify-center text-muted-foreground border border-primary/30 overflow-hidden group">
-                    <span className="group-hover:scale-110 transition-transform duration-500 uppercase text-[10px] tracking-widest">frente depois</span>
+                  <div className="aspect-video bg-muted rounded-xl border border-primary/30 overflow-hidden group">
+                    <img 
+                      src="https://res.cloudinary.com/emqxcgxp/image/upload/v1786692490/frentedepois_u5eynz.jpg" 
+                      alt="Frente da barbearia depois da reforma" 
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
                   </div>
                   <p className="text-xs text-primary text-center font-bold uppercase tracking-wider">Frente — depois</p>
                 </div>
@@ -95,14 +111,22 @@ export function Projects() {
               {/* Par 2 */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-3">
-                  <div className="aspect-video bg-muted/50 rounded-xl flex items-center justify-center text-muted-foreground border border-white/5 overflow-hidden group">
-                    <span className="group-hover:scale-110 transition-transform duration-500 uppercase text-[10px] tracking-widest">lateral barbearia antes</span>
+                  <div className="aspect-video bg-muted/50 rounded-xl border border-white/5 overflow-hidden group">
+                    <img 
+                      src="https://res.cloudinary.com/emqxcgxp/image/upload/v1786692490/lateralbarbeariaantes_crtzdo.jpg" 
+                      alt="Lateral da barbearia antes da reforma" 
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
                   </div>
                   <p className="text-xs text-muted-foreground text-center font-medium uppercase tracking-wider">Lateral — antes</p>
                 </div>
                 <div className="space-y-3">
-                  <div className="aspect-video bg-muted rounded-xl flex items-center justify-center text-muted-foreground border border-primary/30 overflow-hidden group">
-                    <span className="group-hover:scale-110 transition-transform duration-500 uppercase text-[10px] tracking-widest">lateral barbearia depois</span>
+                  <div className="aspect-video bg-muted rounded-xl border border-primary/30 overflow-hidden group">
+                    <img 
+                      src="https://res.cloudinary.com/emqxcgxp/image/upload/v1786692490/lateralbarbeariadepois_mi4hyg.jpg" 
+                      alt="Lateral da barbearia depois da reforma" 
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
                   </div>
                   <p className="text-xs text-primary text-center font-bold uppercase tracking-wider">Lateral — depois</p>
                 </div>
